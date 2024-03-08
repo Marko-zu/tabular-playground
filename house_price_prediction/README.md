@@ -44,3 +44,10 @@ Addressing anomalies to enhance the dataset's integrity and prepare for predicti
 ### Phase 3: Predictive Modeling
 
 Development and implementation of a **Ridge Regression model** to predict the median house values.
+
+## Setting Up the Environment
+
+This project uses a Conda environment to manage dependencies. To recreate the environment, make sure you have Anaconda or Miniconda installed, then run the following command in your terminal:
+
+```sh
+conda env create -f environment.yml
