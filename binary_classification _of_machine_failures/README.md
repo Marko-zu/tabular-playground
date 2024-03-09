@@ -52,7 +52,7 @@ Addressing anomalies to enhance the dataset's integrity and prepare for predicti
 
 ### Phase 3: Predictive Modeling
 
-Development and implementation of a **Logistic Regression model** to predict the probability machine failure.
+Development and implementation of a **Logistic Regression model** to predict the probability of machine failure.
 
 ## Setting Up the Environment
 
