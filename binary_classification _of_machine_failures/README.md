@@ -1,57 +1,64 @@
-data_science_project_structure
-==============================
+# 🛠 Machine Failure Prediction Analysis
 
-project_structure
+This project involves analyzing and modeling a machine failure dataset. We'll be working with a dataset derived from a deep learning model trained on the Machine Failure Predictions dataset. We'll measure our success using the area under the ROC curve, comparing our predicted probabilities to the observed targets.
 
-Project Organization
-------------
+## 📝 Features Description
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+Diving into the core of our analysis, we focus on the following features as detailed in the AI4I 2020 Predictive Maintenance Dataset documentation:
 
+- **`id`**: A unique identifier for each data entry in the dataset. While essential for tracking individual data points, it does not play a role in our predictive model.
 
---------
+- **`Product ID`**: Serves as an identifier for specific products or machines, which may reveal patterns in machine reliability or proneness to failure.
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+- **`Type`**: The type or category of machine, potentially influencing its failure likelihood. Variations across different machine types could yield differing failure rates.
+
+- **`Air temperature [K]`** and **`Process temperature [K]`**: Key indicators of operational conditions, with elevated temperatures often signaling increased risk of machine failure.
+
+- **`Rotational speed [rpm]`**: High operational speeds may augment the risk of failure, making this an important factor to monitor.
+
+- **`Torque [Nm]`**: The torque applied during machine operation can lead to wear and tear, potentially culminating in failure.
+
+- **`Tool wear [min]`**: Reflects the extent of tool use, with increased durations often correlating with heightened failure risk.
+
+- **`Machine failure`**: Our pivotal binary target variable, denoting the occurrence (or absence) of machine failure.
+
+Furthermore, we delve into specific types of failures, each represented as a binary indicator:
+- **`TWF`** (Tool Wear Failure),
+- **`HDF`** (Heat Dissipation Failure),
+- **`PWF`** (Power Failure),
+- **`OSF`** (Overstrain Failure),
+- **`RNF`** (Random Failure).
+
+If any of these conditions are met, the 'machine failure' flag is raised, signaling the end of functionality.
+
+## 📊 Model Evaluation Metric
+
+The model's performance will be evaluated using area under the ROC curve**.
+
+## 📈 Analysis Phases
+
+### Phase 1: Data Examination
+
+A thorough examination of the dataset, including:
+
+- Identification and treatment of missing values.
+- Assessment of feature distribution.
+- Detection of outliers.
+- Conduct of normality tests.
+
+### Phase 2: Data Correction
+
+Addressing anomalies to enhance the dataset's integrity and prepare for predictive modeling.
+
+### Phase 3: Predictive Modeling
+
+Development and implementation of a **Ridge Regression model** to predict the median house values.
+
+## Setting Up the Environment
+
+This project uses a Conda environment to manage dependencies. To recreate the environment, make sure you have Anaconda or Miniconda installed, then run the following command in your terminal:
+
+```sh
+conda env create -f environment.yml
+
+Our endeavor is not merely to predict but to understand—to weave through the data, to detect the subtle patterns and silent anomalies that whisper of failure. 
