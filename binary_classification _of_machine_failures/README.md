@@ -52,7 +52,7 @@ Addressing anomalies to enhance the dataset's integrity and prepare for predicti
 
 ### Phase 3: Predictive Modeling
 
-Development and implementation of a **Ridge Regression model** to predict the median house values.
+Development and implementation of a **Logistic Regression model** to predict the probability machine failure.
 
 ## Setting Up the Environment
 
@@ -60,5 +60,3 @@ This project uses a Conda environment to manage dependencies. To recreate the en
 
 ```sh
 conda env create -f environment.yml
-
-Our endeavor is not merely to predict but to understand—to weave through the data, to detect the subtle patterns and silent anomalies that whisper of failure. 
