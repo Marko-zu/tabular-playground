@@ -1,0 +1,17 @@
+name: env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10.12
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - statsmodels
+  - scikit-learn
+  - tqdm
+  - ipython
+  - pip:
+      - termcolor
