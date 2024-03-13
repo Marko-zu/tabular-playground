@@ -1,5 +1,8 @@
 # 🛠 Machine Failure Prediction Analysis
 
+## Binder
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Marko-zu/tabular-playground/9a180ac87363672864ce5637fb328ad7a06e2ccd?urlpath=lab%2Ftree%2Fbinary_classification%20_of_machine_failures%2Fnotebooks%2Fmachine_failure.ipynb)
+
 This project involves analyzing and modeling a machine failure dataset. We'll be working with a dataset derived from a deep learning model trained on the Machine Failure Predictions dataset. We'll measure our success using the area under the ROC curve, comparing our predicted probabilities to the observed targets.
 
 ## 📝 Features Description
