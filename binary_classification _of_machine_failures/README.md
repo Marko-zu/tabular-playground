@@ -58,8 +58,6 @@ Development and implementation of a **Logistic Regression model** to predict the
 
 This project uses a Conda environment to manage dependencies. To recreate the environment, make sure you have Anaconda or Miniconda installed, then run the following command in your terminal:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Marko-zu/tabular-playground/main?labpath=%2Ftabular-playground%2F)
-
 
 ```sh
 conda env create -f environment.yml
